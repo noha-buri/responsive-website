@@ -261,6 +261,24 @@ font-weight: 800;
   font-weight: 800;
 
 }
+/* my creat section */
+#explore-bangladesh{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.bangladesh-image-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: .7rem;
+}
+.bangladesh-image-container img{
+  border-radius: .75rem;
+}
+#explore-bangladesh h2{
+  margin-top: 4rem;
+  margin-bottom: 5px;
+}
 /* why choose third section */
 #chooser-container{
   width: 80vw;
@@ -514,6 +532,10 @@ font-weight: 800;
   }
   .bandarban > img{
     height: 250px;
+  }
+  /* my creat section */
+  .bangladesh-image-container{
+    grid-template-columns: repeat(2, 1fr);
   }
   /* why choose third section */
   #service-card-container{
