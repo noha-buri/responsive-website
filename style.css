@@ -63,20 +63,24 @@ font-size: 1.2rem;
   font-family: Mulish;
   font-weight: 700;
 }
-
+#click{
+  display: none; 
+}
+.menu-btn{
+  
+  display: none;
+}
 /* banner section code */
 #banner-container{
   width: 80vw;
   height: 450px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.481),rgba(0, 0, 0, 0.178)), url(images/banner.png);
-
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: auto;
   text-align: center; 
   margin-top: 4rem;
   margin-bottom: 4rem;
-
 }
 .banner-title{
   color: white;
@@ -99,8 +103,6 @@ color: rgba(255, 255, 255, 0.608);
   background-color: rgba(240, 248, 255, 0.372);
   border-radius: 5px;
   padding-top: 1rem; 
-  
-  
 }
 .form-style{
   border: none;
@@ -112,7 +114,6 @@ color: rgba(255, 255, 255, 0.608);
   color: rgba(0, 0, 0, 0.441)
  
 }
-
 /* main section code start here */
 /* first section */
 #tour-description-contaier{
@@ -129,6 +130,7 @@ color: rgba(255, 255, 255, 0.608);
   width: 439px;
   height: 422px;
 }
+
 /* travel destination second section */
 #travel-destination-container{
   width: 80vw;
@@ -242,6 +244,7 @@ transform: translate(-50%, -50%);
 color: white;
 font-size: 2rem;
 font-weight: 800;
+
 }
 /* bandarban image */
 .bandarban{
@@ -249,13 +252,14 @@ font-weight: 800;
   text-align: center;
 }
 .bandarban > h2{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-font-size: 2rem;
-font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+
 }
 /* why choose third section */
 #chooser-container{
@@ -273,11 +277,10 @@ font-weight: 800;
   margin: 1.5rem 0;
 }
 #service-card-container{
-width: 80vw;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 1rem;
-
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 #service-card-container > .service-box-hotel{
   border-radius: 16px;
@@ -309,7 +312,7 @@ gap: 1rem;
 .service-box-guarantee > h3{
   margin: 1rem 0;
 }
-/* Newsletter third section */
+/* Newsletter four section */
 #newslater-contaier{
   width: 80vw; 
   margin-top: 4rem;
@@ -317,12 +320,11 @@ gap: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-
 }
 .newslater-description{
   width: 100%;
   height: 100%;
-  border: 3px solid #ff550079;
+  border: 2px solid #ff550079;
   border-radius: .75rem;
   padding: 1rem;
 }
@@ -381,37 +383,193 @@ gap: 1rem;
 }
 /* footer section */
 #footer-container{
-  width: 100vw;
   margin-top: 4rem;
   padding: 100px;
   background: rgba(19, 19, 24, 0.10);
   display: grid;
   place-items: center;
-  text-align: center;
+  text-align: center; 
 }
 .footer-title{
   display: flex;
-  }
-  .footer-title img{
-    width: 62px;
-    height: 54px;
-    margin-right: 25px;
-  }
-  .footer-title > h2 > span{
+}
+.footer-title img{
+  width: 62px;
+  height: 54px;
+  margin-right: 25px; 
+}
+.footer-title > h2 > span{
     color: #05c46b;
     font-size: 1.7rem;
-  }
-  .footer-title > h2{
+}
+.footer-title > h2{
     margin-top: -8px;
-  }
-  .social-icon{
+}
+.social-icon{
     font-size: 1.8rem;
-  }
-  #footer-container > hr{
+}
+#footer-container > hr{
     border: none; 
     width: 920px;
     height: 1px;
     background: rgba(19, 19, 24, 0.10);
+}
+/* responsive weblayout html & css */
+@media only screen and (max-width: 600px) {
+  /* menubar */
+  .menu-btn{
+    display: block;
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
   }
+  #navigation-container > ul{    
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -100%; 
+    flex-direction: column;
+    text-align: center; 
+  }
+  #click:checked ~ #navigation-container > ul{
+    left: 0%;
+  }
+  /* banner section */
+  #banner-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    text-align: center;
+    padding-bottom: 15px;  
+  }
+  #banner-container > .banner-title{
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    padding: 1.5rem 0 .6rem 0;
+  }
+  .banner-content{
+    margin-bottom: 1.7rem;
+  }
+  .form-box{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px 0;
+    place-items: center;
+  }
+  .form-box > .form-style{
+    width: 90%;
+  }
+  .form-box > #primary-button{
+    width: 90%;
+    margin-bottom: 19px;
+  }
+  /* first section */
+  #tour-description-contaier{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  #tour-description-contaier > img{
+    width: 95%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+  /* travel destination second section */
+  #travel-destination-container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .first-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .second-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .third-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .srilanka > img{
+    height: 250px;    
+  }
+  .north-america{
+    height: 250px;
+  }
+  .kashmir > img{ 
+    height: 250px; 
+  }
+  .bangladesh > img{
+    height: 250px;
+  }
+  .bandarban > img{
+    height: 250px;
+  }
+  /* why choose third section */
+  #service-card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .service-box-hotel{
+    text-align: left;
+    padding: 1.5;
+    height: 100%;
+  }
+  .service-box-location{
+    text-align: left;
+    padding: 1.5rem;
+      height: 100%;
+  }
+  #chooser-container > .service-box-guarantee{
+    width: 80vw;
+    height: 100%;
+    text-align: left;
+    padding: 1.5rem;
+  }
+  /* Newsletter four section  */
+  #newslater-contaier{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .save-up{
+    width: 210px;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 34px;
+    right: 7px;
+  } 
+  /* footer-section */
+  #footer-container{
+   width: 100%;
+    padding: 50px;
+  }
+  #footer-container > hr{
+    width: 80%;
+  }
+}
+
+
+
+
+
+   
+  
+  
+    
+  
+  
+  
+
   
   
